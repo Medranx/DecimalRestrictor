@@ -8,14 +8,18 @@ package DecimalRestrictorPackage;
  *
  * @author medrano.
  */
-public class DecimalRestrictor extends JRegExField {
-
-    public DecimalRestrictor() {
+public class JDecimalField extends JRegExField {
+    public JDecimalField() {
         super();
-        setExp("-?[0-9]*\\.?[0-9]*");   
+        setExp("-?[0-9]*(\\.[0-9]*)?");
     }
 
-    public double getValue() {
+    public JDecimalField(int columns) {
+        this();
+        setColumns(columns);
+    }
+
+    public double getValue() throws NumberFormatException {
         return Double.parseDouble(getText());
     }
 }
