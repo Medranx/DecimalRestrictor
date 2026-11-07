@@ -6,10 +6,8 @@ package DecimalRestrictorPackage;
 
 import javax.swing.text.*;
 import java.util.regex.*;
-/**
- *
- * @author tduffy
- */
+import java.swing.text.*
+
 public class RegExDocument extends PlainDocument {
     private String exp;
     private Pattern pattern;
